@@ -11,20 +11,17 @@ def intro():
     print("\nDo you want to play with a friend or against the computer?\nType 'F' for friend or 'C' for computer. Press Enter to start game.")
     print(input("Start Game:"))
 
-def game_board():
-    """
-    Creates a new, blank gameboard
-    """
-    board = [[""]*3,
-             [""]*3,
-             [""]*3]        
-    print(board)
-    #return board
 
 def start_game():
     """
-    Starts the game depending of what choice the player have made
+    Starts the game depending on wich choice the player has made
     """
+    if one_player == "C":
+        print("You decided to play against the computer.")
+    else:
+        two_players = "F"
+        print("You decided to play with a friend.")  
+             
 
 def two_players():
 # This function decides the players' symbols
@@ -51,10 +48,22 @@ def one_player():
     else:
         computer = "X"
         print("You are O and computer is X. ")
-    input("Press enter to continue.")
-    print("\n")
     #return (player_1, computer)
     print(player_1, computer)
 
+def game_board():
+    """
+    Creates a new, blank gameboard
+    """
+    board = [["", "", ""],
+            ["", "", ""],
+            ["", "", ""]]        
+    print(board)
+    #return board
 
+
+intro()
+start_game()
+one_player()
+two_players()
 game_board()
