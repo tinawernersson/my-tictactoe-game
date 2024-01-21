@@ -53,7 +53,9 @@ def turns(player, count):
 
 
 
-
+main():
 start_game()
 two_players()
 game_board()
+
+main()
